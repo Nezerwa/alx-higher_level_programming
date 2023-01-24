@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""List all states with a name starting with N
-Your script should take 3 arguments:
-mysql username, mysql password and database name
+"""
+a script that lists all states with a name starting
+with N (upper N) from the database hbtn_0e_0_usa
 """
 import sys
 import MySQLdb
@@ -11,14 +11,13 @@ if __name__ == '__main__':
                          db=sys.argv[3], port=3306)
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states \
-                 WHERE CONVERT(name USING latin1) \
-                 COLLATE Latin1_General_CS \
-                 LIKE 'N%' \
-                 ORDER BY states.id")
+    cur.execute("SELECT * FROM `states` ORDER BY `id`")
 
     states = cur.fetchall()
-    [print(state) for state in states]
+
+    for state in states:
+        if state[1][0] == "N":
+            print(state)
 
     cur.close()
     db.close()

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Script that display cities in state
+"""
+a script that display cities in state
 """
 
 import sys

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Script that changes the name of a State object
- from the database hbtn_0e_6_usa
+"""
+a script that changes the name of a State object from the database
 Change the name of the State where id = 2 to New Mexico
 """
 

@@ -8,11 +8,12 @@ from model_state import Base, State
 
 
 class City(Base):
-    """Representation of City class
-    args:
-        __tablename___(str): Name of the table
-        id (int): unique identifier of table's row
-        name (str): name of city
+    """
+    Representation of City class
+        args:
+            __tablename___(str): Name of the table
+            id (int): unique identifier of table's row
+            name (str): name of city
     """
     __tablename__ = 'cities'
     id = Column(Integer, unique=True, primary_key=True, nullable=False)
