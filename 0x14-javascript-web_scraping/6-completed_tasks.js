@@ -1,9 +1,12 @@
 #!/usr/bin/node
 
 const request = require('request');
+const url = process.argv[2];
 
-request(process.argv[2], (err, res, body) => {
-  if (err) console.log(err);
+request(url, (err, res, body) => {
+  if (err) {
+    console.log(err);
+  }
 
   const todos = JSON.parse(body);
   const data = {};

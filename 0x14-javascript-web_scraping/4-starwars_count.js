@@ -1,9 +1,11 @@
 #!/usr/bin/node
-const request = require('request');
-const url = process.argv[2];
 
-request(url, (err, res, body) => {
-  if (err) console.log(err);
+const request = require('request');
+
+request(process.argv[2], (err, response, body) => {
+  if (err) {
+    console.log(err);
+  }
 
   const results = JSON.parse(body).results;
   let count = 0;
