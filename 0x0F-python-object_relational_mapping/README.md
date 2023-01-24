@@ -1,1 +1,0 @@
-#Pyhton Object Relational Mapping
